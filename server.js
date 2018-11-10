@@ -28,7 +28,7 @@ var breakfeast = [
     }
 ]
 
-var lunchs = [
+var lunch = [
 {
     lunch: "Beet and goat cheese salad"
 },
@@ -56,3 +56,18 @@ app.get("/breakfeast", function (req,res) {
     res.render("index", breakfeast)
 });
 
+//now we get the lunches route
+app.get("/lunche", function(req,res) {
+    res.render("index", lunch)
+});
+
+//now get the dinner route
+app.get("/dinner", function (req, res) {
+    res.render("index", dinner)
+});
+
+//Start our server so that it can begin listening to client requests 
+app.listen(PORT, function() {
+    // Log (server-side) when our server has started
+    console.log("server is listening on: http://localhost:" + PORT);
+});
