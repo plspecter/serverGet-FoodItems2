@@ -16,15 +16,15 @@ app.set("view engine", "handlebars");
 
 //Data 
 
-var breakfeast = [
+var breakfast = [
     {
-        breakfeast: "Sunnyside up eggs"
+        breakfast: "Sunnyside up eggs"
     },
     {
-        breakfeast: "Green eggs and ham omlette"
+        breakfast: "Green eggs and ham omlette"
     },
     {
-        breakfeast: "French Toast and strawberries"
+        breakfast: "French Toast and strawberries"
     }
 ]
 
@@ -51,13 +51,13 @@ var dinner = [
 ];
 
 //Routes that navigate the browser to each object 
-app.get("/breakfeast", function (req,res) {
+app.get("/breakfast", function (req,res) {
  //this will render the object in the html 
-    res.render("index", breakfeast)
+    res.render("index", breakfast[0])
 });
 
 //now we get the lunches route
-app.get("/lunche", function(req,res) {
+app.get("/lunch", function(req,res) {
     res.render("index", lunch)
 });
 
