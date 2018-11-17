@@ -51,19 +51,39 @@ var dinner = [
 ];
 
 //Routes that navigate the browser to each object 
+// app.get("/breakfast", function (req,res) {
+//     //this will render the object in the html 
+//        res.render("index", breakfast[0]);
+//    });
+   //Routes that navigate the browser to each object 
+// app.get("/breakfast", function (req,res) {
+//     //this will render the object in the html 
+//        res.render("index", breakfast[1]);
+//    });
+
+//Routes that navigate the browser to each object 
 app.get("/breakfast", function (req,res) {
  //this will render the object in the html 
-    res.render("index", breakfast[0])
+    res.render("breakfast", {
+    foods: breakfast,
+    eater: "Sweenie Todd"
+    })
 });
 
 //now we get the lunches route
 app.get("/lunch", function(req,res) {
-    res.render("index", lunch)
-});
+    res.render("index", lunch[1])
+
+});//Routes that navigate the browser to each object 
+
+
 
 //now get the dinner route
 app.get("/dinner", function (req, res) {
-    res.render("index", dinner)
+    res.render("dinner", {
+    foods: dinner,
+    eater: "Sweenie Todd"})
+    // res.render("dinner", dinner[0])
 });
 
 //Start our server so that it can begin listening to client requests 
